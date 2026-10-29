@@ -1,0 +1,95 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  color: #222;
+}
+
+.app {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.task-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+select,
+button {
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.task-list {
+  display: grid;
+  gap: 16px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #0000000d;
+}
+
+.task-item.completed {
+  border-left: 5px solid #2e8b57;
+}
+
+.task-item.pending {
+  border-left: 5px solid #e0a126;
+}
+
+.task-item.in-progress {
+  border-left: 5px solid #3478db;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  background: #c0392b;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: #962d22;
+}
+
+.overdue {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.completed-message {
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+button:focus-visible,
+select:focus-visible {
+  outline: 3px solid #3478db;
+  outline-offset: 3px;
+}
+
